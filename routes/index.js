@@ -17,28 +17,54 @@ router.get('/links', function(req, res){
     title: 'Links + Github'
   });
 });
-
+/*
 router.get('/projects/vaporvoid', function(req, res){
-  res.render('projects/vaporvoid', {
+  res.render('/projects/vaporvoid', {
     title: 'VaporVoid'
   });
 });
 
 router.get('/projects/bluebeard', function(req, res){
-  res.render('bluebeard', {
-    title: 'THe Tale of Bluebeard'
+  res.render(req.params, {
+    title: 'The Tale of Bluebeard'
   });
 });
 
 router.get('/projects/website', function(req, res){
-  res.render('website', {
+  res.render(req.params, {
     title: 'This Website'
   });
 });
 
 router.get('/projects/other_projects', function(req, res){
+  res.render(req.params, {
+    title: 'Other Projects'
+  });
+});
+*/
+
+router.get('/vaporvoid', function(req, res){
+  res.render('vaporvoid', {
+    title: 'VaporVoid'
+  });
+});
+
+router.get('/bluebeard', function(req, res){
+  res.render('bluebeard', {
+    title: 'The Tale of Bluebeard'
+  });
+});
+
+router.get('/website', function(req, res){
+  res.render('website', {
+    title: 'This Website'
+  });
+});
+
+router.get('/other_projects', function(req, res){
   res.render('other_projects', {
     title: 'Other Projects'
   });
 });
+
 module.exports = router;

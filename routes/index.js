@@ -57,7 +57,7 @@ router.get('/bluebeard', function(req, res){
 
 router.get('/website', function(req, res){
   res.render('website', {
-    title: 'This Website'
+    title: 'Website'
   });
 });
 
